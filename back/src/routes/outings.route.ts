@@ -1,12 +1,10 @@
 import { Express } from 'express';
-import { AttendeesController } from '../controllers';
+import { OutingsController } from '../controllers';
 
-export function attendeesRoute(app: Express): void {
-    const controller = new AttendeesController();
+export function outingsRoute(app: Express): void {
+	const controller = new OutingsController();
 
-    app.route('/api/attendees')
-
-        app.route('/api/attendees')
+	app.route('/api/outings')
 		.get((request, result) => {
 			controller.getAll(request, result);
 		})
@@ -14,7 +12,7 @@ export function attendeesRoute(app: Express): void {
 			controller.create(request, result);
 		});
 
-	app.route('/api/attendees/:attendee')
+	app.route('/api/outings/:id')
 		.get((request, result) => {
 			controller.getById(request, result);
 		})
@@ -23,5 +21,10 @@ export function attendeesRoute(app: Express): void {
 		})
 		.delete((request, result) => {
 			controller.delete(request, result);
+		});
+
+	app.route('/api/attendees/:outingId')
+		.post((request, result) => {
+			controller.createAttendee(request, result);
 		});
 }

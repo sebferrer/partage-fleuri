@@ -1,8 +1,7 @@
 import express from 'express';
 import { Express, Request, Response } from 'express';
 import cors from 'cors';
-import * as bodyParser from 'body-parser';
-import { attendeesRoute } from './routes';
+import { outingsRoute } from './routes';
 
 export class HTTPServer {
     private static instance: HTTPServer;
@@ -11,11 +10,11 @@ export class HTTPServer {
 
     private constructor() {
         this.app.use(cors())
-        /*this.app.use(bodyParser.urlencoded({ extended: true }));
-        this.app.use(bodyParser.json());*/
+        this.app.use(express.urlencoded());
+        this.app.use(express.json());
 
         const routes: ((app: Express) => void)[] = [
-            attendeesRoute
+            outingsRoute
         ];
         routes.forEach(route => route(this.app));
 

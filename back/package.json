@@ -11,14 +11,21 @@
   "devDependencies": {
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
+    "@types/ip": "^1.1.0",
     "@types/node": "^18.11.18",
+    "@types/sha256": "^0.2.0",
+    "@types/truncate-utf8-bytes": "^1.0.0",
     "typescript": "^4.9.3",
     "vite-node": "^0.32.0"
   },
   "author": "sebferrer",
   "dependencies": {
-    "body-parser": "^1.20.2",
+    "@types/moment": "^2.13.0",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "ip": "^1.1.8",
+    "moment": "^2.29.4",
+    "sha256": "^0.2.0",
+    "truncate-utf8-bytes": "^1.0.2"
   }
 }

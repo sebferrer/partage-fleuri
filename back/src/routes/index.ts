@@ -1,1 +1,1 @@
-export * from './attendees.route';
+export * from './outings.route';

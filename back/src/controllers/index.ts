@@ -1,1 +1,1 @@
-export * from './attendees.controller';
+export * from './outings.controller';
